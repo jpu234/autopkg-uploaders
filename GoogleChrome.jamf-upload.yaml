@@ -1,12 +1,12 @@
-Description: Downloads the latest version of Google Earth and makes a PKG. Then, uploads to the Jamf Pro Server.
-Identifier: com.github.jchutc0.autopkg-uploaders.GoogleEarth.jamf-upload
+Description: Downloads the latest version of Google Chrome and makes a PKG. Then uploads it to the Jamf Pro Server.
+Identifier: com.github.jchutc0.autopkg-uploaders.Firefox.jamf-upload
 MinimumVersion: "2.3"
-ParentRecipe: com.github.autopkg.pkg.google-earth
+ParentRecipe: com.github.autopkg.pkg.googlechrome
 
 Input:
-  CATEGORY: "General Lab Software"
-  NAME: "GoogleEarth"
-  POLICY_NAME: "Install latest %NAME%"
+  CATEGORY: "Browsers"
+  NAME: "GoogleChrome"
+  POLICY_NAME: "Test latest %NAME%"
   POLICY_TEMPLATE: "All-Computers-Policy-Template.xml"
 
 Process:
