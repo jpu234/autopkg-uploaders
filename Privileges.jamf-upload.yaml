@@ -1,0 +1,48 @@
+Description: 
+  Downloads the latest version of a package and makes it into a PKG file.
+  After, uploads the package to a JSS, sets up a policy to test it, and uploads a
+  second copy to the JSS with -current.pkg instead of a version name.
+  The following need to be set in this file --
+  * Identifier - has to be unique
+  * ParentRecipe - Identifier of the original recipe to download the PKG
+  * Category - category of the -current PKG -- testing for the versioned
+  * Name - Name of the package
+
+Identifier: com.github.jchutc0.autopkg-uploaders.Privileges.jamf-upload
+MinimumVersion: "2.3"
+ParentRecipe: com.github.rtrouton.pkg.privileges
+
+Input:
+  CATEGORY: "Special Request"
+  NAME: "Privileges"
+  POLICY_NAME: "Test latest %NAME%"
+  POLICY_TEMPLATE: "All-Computers-Policy-Template.xml"
+
+Process:
+- Arguments:
+    pkg_category: "Testing"
+  Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  
+- Arguments: 
+    predicate: "pkg_uploaded == False"
+  Processor: StopProcessingIf
+    
+- Arguments:
+    policy_name: "%POLICY_NAME%"
+    policy_template: "%POLICY_TEMPLATE%"
+    replace_policy: "True"
+  Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+
+- Arguments: 
+    predicate: "pkg_uploaded == False"
+  Processor: StopProcessingIf
+
+- Arguments:
+    source_pkg: "%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg"
+    pkg_path: "%RECIPE_CACHE_DIR%/%NAME%-current.pkg"
+  Processor: PkgCopier
+
+- Arguments:
+    pkg_category: "%CATEGORY%"
+    pkg_name: "%NAME%-current.pkg"
+  Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
