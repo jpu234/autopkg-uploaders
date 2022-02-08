@@ -1,11 +1,11 @@
-Description: Downloads the latest version of Google Chrome and makes a PKG. Then uploads it to the Jamf Pro Server.
-Identifier: com.github.jchutc0.autopkg-uploaders.GoogleChrome.jamf-upload
+Description: Downloads the latest version of BBEdit and makes a PKG. Then uploads it to the Jamf Pro Server.
+Identifier: com.github.jchutc0.autopkg-uploaders.BBEdit.jamf-upload
 MinimumVersion: "2.3"
-ParentRecipe: com.github.autopkg.pkg.googlechrome
+ParentRecipe: com.github.autopkg.pkg.BBEdit
 
 Input:
-  CATEGORY: "Browsers"
-  NAME: "GoogleChrome"
+  CATEGORY: "General Lab Software"
+  NAME: "BBEdit"
   POLICY_NAME: "Test latest %NAME%"
   POLICY_TEMPLATE: "All-Computers-Policy-Template.xml"
 
