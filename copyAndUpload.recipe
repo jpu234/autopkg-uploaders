@@ -5,7 +5,7 @@
         <key>Description</key>
         <string>Recipe description</string>
         <key>Identifier</key>
-        <string>local.copyAndUpload</string>
+        <string>com.github.jchutc0.autopkg-uploaders.BBEdit.jamf-upload</string>
         <key>Input</key>
         <dict>
                 <key>NAME</key>
