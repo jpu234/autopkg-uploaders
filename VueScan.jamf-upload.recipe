@@ -17,7 +17,7 @@
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
-	<key>Recipes</key>
+	<key>postprocessors</key>
 	<array>
 		<string>com.github.jchutc0.autopkg-uploaders.copyAndUpload</string>
 	</array>
