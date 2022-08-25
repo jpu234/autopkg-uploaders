@@ -17,19 +17,9 @@
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
-	<key>Process</key>
+	<key>Recipes</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>CATEGORY</key>
-				<string>%CATEGORY%</string>
-				<key>NAME</key>
-				<string>%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.jchutc0.autopkg-uploaders.copyAndUpload</string>
-		</dict>
+		<string>com.github.jchutc0.autopkg-uploaders.copyAndUpload</string>
 	</array>
 </dict>
 </plist>
