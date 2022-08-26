@@ -19,8 +19,7 @@
 		<key>NAME</key>
 		<string>VueScan</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>All-Computers-Policy-Template.xml
-</string>
+		<string>All-Computers-Policy-Template.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
