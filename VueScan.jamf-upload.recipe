@@ -20,7 +20,8 @@
 		<key>NAME</key>
 		<string>VueScan</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>~/Library/AutoPkg/JSSRecipes/All-Computers-Policy-Template.xml</string>
+		<string>~/Library/AutoPkg/RecipeRepos/com.github.jchutc0.autopkg-uploaders/All-Computers-Policy-Template.xml
+</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
