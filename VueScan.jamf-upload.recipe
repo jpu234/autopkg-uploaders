@@ -3,7 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Recipe description</string>
+	<string>
+		* Downloads the latest VueScan
+		* Copies it to the Jamf server
+		* Makes a -current copy of the package
+		* Uploads that package to the server
+	</string>
 	<key>Identifier</key>
 	<string>com.github.jchutc0.autopkg-uploaders.VueScan.jamf-upload</string>
 	<key>ParentRecipe</key>
@@ -14,12 +19,57 @@
 		<string>Device Drivers</string>
 		<key>NAME</key>
 		<string>VueScan</string>
+		<key>POLICY_TEMPLATE</key>
+		<string>~/Library/AutoPkg/JSSRecipes/All-Computers-Policy-Template.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
-	<key>postprocessors</key>
+	<key>Process</key>
 	<array>
-		<string>com.github.jchutc0.autopkg-uploaders.copyAndUpload</string>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>Testing</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>pkg_uploaded == False</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>Install Latest %NAME%</string>
+				<key>policy_template</key>
+				<string>%POLICY_TEMPLATE%</string>
+				<key>replace_policy</key>
+				<string>True</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+				<key>pkg_name</key>
+				<string>%NAME%-current.pkg</string>
+				<key>replace_pkg</key>
+				<string>True</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
 	</array>
 </dict>
 </plist>
