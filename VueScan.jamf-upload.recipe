@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>policy_name</key>
-				<string>Install Latest %NAME%</string>
+				<string>AutoPKG - Install Latest %NAME%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
 				<key>replace_policy</key>
