@@ -6,8 +6,7 @@
 	<string>
 		* Downloads the latest VueScan
 		* Copies it to the Jamf server
-		* Makes a -current copy of the package
-		* Uploads that package to the server
+		* Make another copy on the server with the -current name
 	</string>
 	<key>Identifier</key>
 	<string>com.github.jchutc0.autopkg-uploaders.VueScan.jamf-upload</string>
@@ -20,7 +19,7 @@
 		<key>NAME</key>
 		<string>VueScan</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>~/Library/AutoPkg/RecipeRepos/com.github.jchutc0.autopkg-uploaders/All-Computers-Policy-Template.xml
+		<string>All-Computers-Policy-Template.xml
 </string>
 	</dict>
 	<key>MinimumVersion</key>
