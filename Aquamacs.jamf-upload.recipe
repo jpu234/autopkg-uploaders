@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>
+		* Downloads the latest Aquamacs
+		* Copies it to the Jamf server
+		* Make another copy on the server with the -current name
+	</string>
+	<key>Identifier</key>
+	<string>com.github.jchutc0.autopkg-uploaders.Aquamacs.jamf-upload</string>
+	<key>ParentRecipe</key>
+	<string>com.github.hansen-m.pkg.aquamacs</string>
+	<key>Input</key>
+	<dict>
+		<key>CATEGORY</key>
+		<string>Programming</string>
+		<key>NAME</key>
+		<string>Aquamacs</string>
+		<key>POLICY_TEMPLATE</key>
+		<string>All-Computers-Policy-Template.xml</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>Testing</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>pkg_uploaded == False</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>AutoPKG - Install Latest %NAME%</string>
+				<key>policy_template</key>
+				<string>%POLICY_TEMPLATE%</string>
+				<key>replace_policy</key>
+				<string>True</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+				<key>pkg_name</key>
+				<string>%NAME%-current.pkg</string>
+				<key>replace_pkg</key>
+				<string>True</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
