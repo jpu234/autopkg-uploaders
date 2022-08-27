@@ -17,7 +17,7 @@
 		<key>CATEGORY</key>
 		<string>Administrative</string>
 		<key>NAME</key>
-		<string>Microsoft_Defender_ATP</string>
+		<string>Microsoft_Defender</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>All-Computers-Policy-Template.xml</string>
 	</dict>
