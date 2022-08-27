@@ -11,7 +11,7 @@
 	<key>Identifier</key>
 	<string>com.github.jchutc0.autopkg-uploaders.MicrosoftDefenderATP.jamf-upload</string>
 	<key>ParentRecipe</key>
-	<string>com.github.rtrouton.pkg.microsoftdefenderatp</string>
+	<string>com.github.rtrouton.pkg.microsoftdefender</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
