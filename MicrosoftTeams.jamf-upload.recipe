@@ -4,20 +4,20 @@
 <dict>
 	<key>Description</key>
 	<string>
-		* Downloads the latest VLC
+		* Downloads the latest Microsoft Teams
 		* Copies it to the Jamf server
 		* Make another copy on the server with the -current name
 	</string>
 	<key>Identifier</key>
-	<string>com.github.jchutc0.autopkg-uploaders.VLC.jamf-upload</string>
+	<string>com.github.jchutc0.autopkg-uploaders.MicrosoftTeams.jamf-upload</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.pkg.VLC</string>
+	<string>com.github.rtrouton.pkg.microsoftteams</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>General Lab Software</string>
+		<string>Office</string>
 		<key>NAME</key>
-		<string>VLC</string>
+		<string>Microsoft_Teams</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>All-Computers-Policy-Template.xml</string>
 	</dict>
