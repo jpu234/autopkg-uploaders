@@ -17,7 +17,7 @@
 		<key>CATEGORY</key>
 		<string>Office</string>
 		<key>NAME</key>
-		<string>MicrosoftOffice365BusinessProSuite</string>
+		<string>Microsoft_Office_Business_Pro_Suite</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>All-Computers-Policy-Template.xml</string>
 	</dict>

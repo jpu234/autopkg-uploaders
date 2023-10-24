@@ -17,7 +17,7 @@
 		<key>CATEGORY</key>
 		<string>Office</string>
 		<key>NAME</key>
-		<string>MicrosoftTeamsForWorkOrSchool</string>
+		<string>Microsoft_Teams_For_Work_Or_School</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>All-Computers-Policy-Template.xml</string>
 	</dict>
