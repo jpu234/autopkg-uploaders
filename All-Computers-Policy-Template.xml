@@ -19,10 +19,6 @@
       <all_computers>false</all_computers>
       <computer_groups>
         <computer_group>
-          <id>633</id>
-          <name>Smart Production Machines</name>
-        </computer_group>
-        <computer_group>
           <id>730</id>
           <name>LS Testing Machines</name>
         </computer_group>
