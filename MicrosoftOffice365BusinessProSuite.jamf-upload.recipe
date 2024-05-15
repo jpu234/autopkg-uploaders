@@ -9,9 +9,9 @@
 		* Make another copy on the server with the -current name
 	</string>
 	<key>Identifier</key>
-	<string>com.github.jchutc0.autopkg-uploaders.MicrosoftOffice365BusinessProSuite.jamf-upload</string>
+	<string>com.github.jpu234.autopkg-uploaders.MicrosoftOffice365BusinessProSuite.jamf-upload</string>
 	<key>ParentRecipe</key>
-	<string>MicrosoftOffice365BusinessProSuite.pkg</string>
+	<string>com.github.rtrouton.pkg.MicrosoftOffice365BusinessProSuite</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
