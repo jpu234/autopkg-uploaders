@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release of swiftDialog from the release page on Github: https://github.com/swiftDialog/swiftDialog/releases/</string>
     <key>Identifier</key>
-    <string>com.github.jchutc0.autopkg-uploaders.swiftDialog.download</string>
+    <string>com.github.jpu234.autopkg-uploaders.swiftDialog.download</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
