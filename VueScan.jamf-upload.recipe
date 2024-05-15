@@ -9,7 +9,7 @@
 		* Make another copy on the server with the -current name
 	</string>
 	<key>Identifier</key>
-	<string>com.github.jchutc0.autopkg-uploaders.VueScan.jamf-upload</string>
+	<string>com.github.jpu234.autopkg-uploaders.VueScan.jamf-upload</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jps3.pkg.VueScan</string>
 	<key>Input</key>
