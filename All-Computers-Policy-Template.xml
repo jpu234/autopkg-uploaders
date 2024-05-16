@@ -11,8 +11,8 @@
         <name>Testing</name>
       </category>
       <site>
-        <id>1</id>
-        <name>Learning Spaces</name>
+        <id>20</id>
+        <name>TESTING</name>
       </site>
     </general>
     <scope>
@@ -20,7 +20,7 @@
       <computer_groups>
         <computer_group>
           <id>730</id>
-          <name>LS Testing Machines</name>
+          <name>Testing Machines</name>
         </computer_group>
       </computer_groups>
     </scope>
