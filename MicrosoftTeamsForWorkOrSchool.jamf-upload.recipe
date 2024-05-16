@@ -11,7 +11,7 @@
 	<key>Identifier</key>
 	<string>com.github.jpu234.autopkg-uploaders.MicrosoftTeamsForWorkOrSchool.jamf-upload</string>
 	<key>ParentRecipe</key>
-	<string>com.github.rtrouton.pkg.microsoftteamsforworkorschool</string>
+	<string>com.github.rtrouton.pkg.microsoftteams</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
